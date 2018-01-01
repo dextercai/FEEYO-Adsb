@@ -30,23 +30,26 @@ sockobj = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 sockobj.connect((serverHost,serverPort))
 
 def send_message(source_data):
-	try:
-		source_data=base64.b64encode(zlib.compress(source_data))
-		f=urllib2.urlopen(url = config.get("global","sendurl"),data =  urllib.urlencode({'from':mid,'code':source_data}),timeout = 60)
-		print "return: "+f.read();
-		return True
-	except Exception,e:
-		print str(e)
-		return False
+        try:
+		monitorsend=open('/usr/src/time.txt','w')
+                monitorsend.write("ok")
+		monitorsend.close()
+                source_data=base64.b64encode(zlib.compress(source_data))
+                f=urllib2.urlopen(url = config.get("global","sendurl"),data =  urllib.urlencode({'from':mid,'code':source_data}),timeout = 2)
+                print "return: "+f.read();
+                return True
+        except Exception,e:
+                print str(e)
+                return True
 
 tmp_buf=''
 
 while 1:
-	buf = sockobj.recv(1024)
-	if not buf: break
-	if len(buf) != 0:
-		tmp_buf=tmp_buf+buf
-		if buf[len(buf)-1] == '\n':
-			if send_message(tmp_buf) :
-				tmp_buf=''
-				
+        buf = sockobj.recv(1024)
+        if not buf: break
+        if len(buf) != 0:
+                tmp_buf=tmp_buf+buf
+                if buf[len(buf)-1] == '\n':
+                        if send_message(tmp_buf) :
+                                tmp_buf=''
+

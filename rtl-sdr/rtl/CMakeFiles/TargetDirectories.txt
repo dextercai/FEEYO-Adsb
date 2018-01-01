@@ -1,0 +1,11 @@
+/root/rtl-sdr/rtl/src/CMakeFiles/convenience_static.dir
+/root/rtl-sdr/rtl/src/CMakeFiles/rtl_adsb.dir
+/root/rtl-sdr/rtl/src/CMakeFiles/rtl_eeprom.dir
+/root/rtl-sdr/rtl/src/CMakeFiles/rtl_fm.dir
+/root/rtl-sdr/rtl/src/CMakeFiles/rtl_power.dir
+/root/rtl-sdr/rtl/src/CMakeFiles/rtl_sdr.dir
+/root/rtl-sdr/rtl/src/CMakeFiles/rtl_tcp.dir
+/root/rtl-sdr/rtl/src/CMakeFiles/rtl_test.dir
+/root/rtl-sdr/rtl/src/CMakeFiles/rtlsdr_shared.dir
+/root/rtl-sdr/rtl/src/CMakeFiles/rtlsdr_static.dir
+/root/rtl-sdr/rtl/CMakeFiles/uninstall.dir

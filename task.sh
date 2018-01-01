@@ -2,9 +2,9 @@
 ps -eaf | grep dump1090 | grep -v grep
 if [ $? -eq 1 ]
 then
-/etc/systemd/user/dump stop
+/etc/init.d/dump stop
 sleep 1
-/etc/systemd/user/dump start
+/etc/init.d/dump start
 echo `date "+%G-%m-%d %H:%M:%S"`" dump1090            restart"
 echo "------------------------------------------------------------------------"
 else
@@ -35,5 +35,3 @@ else
 echo `date "+%G-%m-%d %H:%M:%S"`" get_ip            running"
 echo "------------------------------------------------------------------------"
 fi
-
-/usr/sbin/ntpdate 115.182.42.248 > /dev/null

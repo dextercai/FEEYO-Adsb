@@ -50,9 +50,9 @@ def send_message(source_data):
 	if (md5 == request_md5):
 		operate(request_json)
 	else :
-		print ('MD5 ERR')
+		print 'MD5 ERR'
 
-	print ("return: "+tmp_return);
+	print "return: "+tmp_return;
 
 def get_ip_address(ifname):
     skt = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -68,7 +68,7 @@ def operate(request_json):
 		fileHandle.write( urllib.unquote( request_json['content'] ) )
 		fileHandle.close()
 	else :
-		print ('OK')
+		print 'OK'
 	
 
 
