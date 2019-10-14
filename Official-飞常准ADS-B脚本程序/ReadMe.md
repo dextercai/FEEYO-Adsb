@@ -7,7 +7,7 @@ Example FlightAware or any pre-build ADS-B image already installed.
 Else setup for VariFlight feeder will failed!
 This setup script just borrow the existing feeder Dump1090 decoder to function.
 
-  - Login as root.
+  1. Login as root.
 
   - Unzip the file into the root folder.
 
